@@ -9,8 +9,36 @@
 <body>
     <a href="indexOne.html">Go To Page 1</a>
     <script>
+            // LOCAL STORAGE
+
+            // writing localStorage items to the browser using document.write.
         document.write("<h2>Hi "+localStorage.name+" from "+localStorage.home+" who is "+localStorage.age+" years old")
+
+            // checking how many items aka key-value pairs are in localStorage
         document.write("<h2>The local storage has "+localStorage.length+" items in it.")
+
+            // run the key method.
+            // this return the NAME of the KEY, NOT the VALUE of the key, only the NAME!
+        document.write("<h2>The local storage item at the first, zeroith index is "+localStorage.key(0)+" because it comes first alphabetically</h2>")
+
+            // to get the VALUE of the item andnot just the KEY name, you use the .getItem method.
+        document.write("<h2>The value of the item Home in localStorage is "+localStorage.getItem("home")+"." )
+
+            // to clear ALL of localStorage, use localStorage.clear()
+
+            // to clear/remove ONE item from LS, use the .removeItem method.
+        localStorage.removeItem("age")
+
+            // checking the new length to see if age was removed at this point
+        document.write("<h2>The local storage has "+localStorage.length+" items in it.")
+
+     //       // SESSION STORAGE
+     //       // session storage is all the same things as local storage but the memory is lost when you close the browser/tab
+
+            //COOKIES
+
+        document.cookie = 'firstName=Brian'
+        document.cookie = 'lastName=Jones'
     </script>
 </body>
 </html>
